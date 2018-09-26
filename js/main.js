@@ -9,3 +9,19 @@ function _q( selector ) {
     
     return elements;
 }
+
+//Profil beviteli mező megjelenítése
+
+function showProfile() {
+    
+    //Elem kiválasztása
+    var div = document.querySelector( ".profile-div" );
+    
+    //Ha a show class hozzá van adva az elemhez elrejtjük, különben megjelenítjük.
+    if (div.classList.contains("show")) {
+        div.classList.remove( "show" );
+    } else {
+        div.classList.add( "show" );
+    }
+    
+}
