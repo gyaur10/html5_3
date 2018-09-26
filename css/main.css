@@ -16,6 +16,7 @@
 .profile-div {
     position: fixed;
     left: -100%;
+    top: 100px;
     opacity: 0;
     /*transition: all 0.5s;*/
 }
@@ -23,9 +24,10 @@
 .profile-div.show {
     position: relative;
     animation-name: facebook;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
     left: 0;
-    /*transition: all 0.5s;*/
+    top: 0;
     opacity: 1;
 }
 
@@ -35,11 +37,15 @@
     margin: 10px auto;
 }
 
+@media screen and (max-width: 550px)    {
+    .profile-div form {
+        width: 100%;
+    }
+}
+
  /* Keyframes */
 @keyframes facebook {
-    0%      {opacity: 0; left: -100%;}
-    25%     {opacity: 0; left: -75%;}
-    50%     {opacity: 0; left: -50%;}
-    75%     {opacity: 0; left: -25%;}
-    100%    {opacity: 1; left: 0;}
+    0%      {opacity: 0; left: -100%; top: 100px;}
+    50%     {opacity: 0.5; left: 0; top: 100px;}
+    100%    {opacity: 1; left: 0; top: 0;}
 }
